@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './App.css'
 
+const heroImage = `${import.meta.env.BASE_URL}start.png`
+
 const navLinks = [
   { label: 'Главная', href: '#hero' },
   { label: 'Услуги', href: '#services' },
@@ -90,7 +92,7 @@ function App() {
           <p className="hero-note">Подача от 25 минут • Работаем 24/7</p>
         </div>
         <div className="hero-right">
-          <img src="/start.png" alt="Эвакуатор на вызове" className="truck-main" />
+          <img src={heroImage} alt="Эвакуатор на вызове" className="truck-main" />
         </div>
       </header>
 
