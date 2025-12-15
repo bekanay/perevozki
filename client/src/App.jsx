@@ -1,13 +1,20 @@
 import { useState } from 'react'
 import './App.css'
 
-const heroImage = `${import.meta.env.BASE_URL}start.png`
+const heroImage = `${import.meta.env.BASE_URL}gazel2.png`
 const logoImage = `${import.meta.env.BASE_URL}logo_avtohelp.png`
+const galleryImages = [
+  `${import.meta.env.BASE_URL}evacuator.jpg`,
+  `${import.meta.env.BASE_URL}gazel1.jpg`,
+  `${import.meta.env.BASE_URL}gazel2.png`,
+  `${import.meta.env.BASE_URL}gazel3.jpg`,
+  `${import.meta.env.BASE_URL}truck-hero.jpg`,
+]
 
 const navLinks = [
   { label: 'Главная', href: '#hero' },
   { label: 'Услуги', href: '#services' },
-  { label: 'Особенности', href: '#features' },
+  { label: 'Особенности', href: '#features-grid' },
   { label: 'Преимущества', href: '#pros' },
   { label: 'Вызвать', href: '#cta' },
   { label: 'Отзывы', href: '#reviews' },
@@ -52,8 +59,11 @@ const reviews = [
 
 function App() {
   const [showContacts, setShowContacts] = useState(false)
+  const [slide, setSlide] = useState(0)
   const openContacts = () => setShowContacts(true)
   const closeContacts = () => setShowContacts(false)
+  const nextSlide = () => setSlide((prev) => (prev + 1) % galleryImages.length)
+  const prevSlide = () => setSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
 
   return (
     <div className="page">
@@ -109,26 +119,6 @@ function App() {
         </div>
       </section>
 
-      <section className="intro section-block alt" id="features">
-        <h2>Эвакуируем любую ситуацию</h2>
-        <p>
-          Поможем, если авто не заводится, заблокирована коробка, села пневма или нужно перевезти технику на ТО.
-          Крепим авто мягкими стропами, фиксируем тросами и делаем фото перед выездом.
-        </p>
-        <div className="intro-block">
-          <div className="intro-text">
-            <h3>Эвакуатор для легковых и кроссоверов</h3>
-            <p>Загрузим аккуратно даже с низким клиренсом. Уточним адрес, разблокируем руль и подадим плавный заезд.</p>
-            <button className="btn primary">Заказать эвакуатор</button>
-          </div>
-          <div className="illustration">
-            <div className="abstract-shape" />
-            <div className="abstract-pulse" />
-            <div className="label accent">Низкий клиренс? Подадим пандус</div>
-          </div>
-        </div>
-      </section>
-
       <section className="features section-block" id="features-grid">
         <div className="feature-grid">
           {features.map((f) => (
@@ -137,6 +127,34 @@ function App() {
               <h4>{f.title}</h4>
               <p>{f.desc}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="gallery section-block" id="gallery">
+        <div className="gallery-top">
+          <h2>Наш парк эвакуаторов</h2>
+          <p>Свежие авто, низкие платформы и спецоборудование под разные задачи.</p>
+        </div>
+        <div className="carousel">
+          <button className="carousel-btn" aria-label="Предыдущий слайд" onClick={prevSlide}>
+            ‹
+          </button>
+          <div className="carousel-frame">
+            <img src={galleryImages[slide]} alt="Эвакуатор avtohelp_kz" className="carousel-img" />
+          </div>
+          <button className="carousel-btn" aria-label="Следующий слайд" onClick={nextSlide}>
+            ›
+          </button>
+        </div>
+        <div className="carousel-dots">
+          {galleryImages.map((_, idx) => (
+            <button
+              key={idx}
+              className={`dot ${idx === slide ? 'active' : ''}`}
+              aria-label={`Показать слайд ${idx + 1}`}
+              onClick={() => setSlide(idx)}
+            />
           ))}
         </div>
       </section>

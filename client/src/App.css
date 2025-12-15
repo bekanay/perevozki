@@ -134,7 +134,7 @@
 }
 
 .hero-left {
-  padding: 36px;
+  padding: 42px 40px;
   background: linear-gradient(135deg, #f5641c 0%, #ed5a17 40%, #e95112 100%);
   color: #fff;
   position: relative;
@@ -150,7 +150,7 @@
 
 .hero-left h1 {
   margin: 10px 0 18px;
-  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-size: clamp(2.3rem, 4.4vw, 3.2rem);
   line-height: 1.05;
   position: relative;
 }
@@ -281,14 +281,15 @@
   justify-content: center;
   padding: 32px 28px;
   overflow: hidden;
-  min-height: 320px;
+  min-height: 460px;
 }
 
 .truck-main {
-  width: 100%;
-  max-width: 460px;
-  max-height: 320px;
-  object-fit: contain;
+  width: 110%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
   position: relative;
   z-index: 1;
   filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.14));
@@ -442,6 +443,114 @@
 .feature-card p {
   color: #4c5967;
   margin: 4px 0 0;
+}
+
+.gallery {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 14px 32px rgba(14, 28, 49, 0.08);
+  padding: 18px;
+}
+
+.gallery-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.gallery-top h2 {
+  margin: 0;
+}
+
+.gallery-top p {
+  margin: 0;
+  color: #4c5967;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.carousel-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f5f7fb;
+  aspect-ratio: 16 / 9;
+  min-height: 260px;
+  max-height: 360px;
+  width: min(920px, 100%);
+  margin: 0 auto;
+  box-shadow: inset 0 0 0 1px #eef2f6, 0 12px 30px rgba(14, 28, 49, 0.08);
+}
+
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(14, 28, 49, 0.14);
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #c74307;
+  display: grid;
+  place-items: center;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.carousel-btn:first-of-type {
+  left: 12px;
+}
+
+.carousel-btn:last-of-type {
+  right: 12px;
+}
+
+.carousel-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(14, 28, 49, 0.18);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #c74307;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.dot.active {
+  background: #f5641c;
+  transform: scale(1.05);
 }
 
 .benefits {
@@ -602,7 +711,7 @@
   }
 
   .hero-right {
-    max-height: 320px;
+    min-height: 360px;
   }
 
   .intro-block {
@@ -623,6 +732,7 @@
 
   .hero-right {
     padding: 16px;
+    min-height: 300px;
   }
 
   .cta {
@@ -659,7 +769,9 @@
   }
 
   .truck-main {
-    max-width: 360px;
+    height: auto;
+    width: 100%;
+    object-fit: contain;
   }
 }
 
@@ -699,5 +811,14 @@
   .modal-card {
     width: 100%;
     max-width: none;
+  }
+
+  .carousel {
+    padding: 0 6px;
+  }
+
+  .carousel-frame {
+    min-height: 200px;
+    max-height: 240px;
   }
 }
