@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 const heroImage = `${import.meta.env.BASE_URL}start.png`
+const logoImage = `${import.meta.env.BASE_URL}logo_avtohelp.png`
 
 const navLinks = [
   { label: 'Главная', href: '#hero' },
@@ -58,10 +59,12 @@ function App() {
     <div className="page">
       <div className="topbar">
         <div className="brand">
-          <div className="brand-mark">EVQ</div>
+          <div className="brand-mark">
+            <img src={logoImage} alt="Логотип avtohelp_kz" className="brand-logo" />
+          </div>
           <div>
-            <div className="brand-title">Эвакуатор 24/7</div>
-            <div className="brand-sub">Астана и область</div>
+            <div className="brand-title">avtohelp_kz</div>
+            <div className="brand-sub">Эвакуатор 24/7 • Астана</div>
           </div>
         </div>
         <nav className="nav">
@@ -87,7 +90,7 @@ function App() {
             <button className="btn primary" onClick={openContacts}>
               Вызвать эвакуатор
             </button>
-            <p className="phone">8 (778) 684-9870</p>
+            <p className="phone">8 (707) 624 8060</p>
           </div>
           <p className="hero-note">Подача от 25 минут • Работаем 24/7</p>
         </div>
@@ -193,16 +196,24 @@ function App() {
             <h3>Свяжитесь с нами</h3>
             <p className="modal-text">Подача от 25 минут. Выберите удобный способ:</p>
             <div className="modal-actions">
-              <a className="btn primary full" href="tel:+77786849870">
-                Позвонить: +7 (778) 684-9870
+              <a className="btn primary full" href="tel:+77076248060">
+                Позвонить: +7 (707) 624 8060
               </a>
               <a
                 className="btn ghost full"
-                href="https://wa.me/77786849870"
+                href="https://wa.me/77076248060"
                 target="_blank"
                 rel="noreferrer"
               >
                 Написать в WhatsApp
+              </a>
+              <a
+                className="btn ghost full"
+                href="https://www.instagram.com/avtohelp_kz/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram: @avtohelp_kz
               </a>
             </div>
           </div>
