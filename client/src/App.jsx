@@ -20,7 +20,6 @@ const navLinks = [
   { label: 'Особенности', href: '#features-grid' },
   { label: 'Преимущества', href: '#pros' },
   { label: 'Вызвать', href: '#cta' },
-  { label: 'Отзывы', href: '#reviews' },
 ]
 
 const services = [
@@ -43,21 +42,6 @@ const advantages = [
   'Фиксированная цена перед выездом',
   'Оплата картой или переводом',
   'Страхование груза и авто',
-]
-
-const reviews = [
-  {
-    name: 'Дамир',
-    text: 'Застрял на трассе, эвакуатор приехал за 30 минут. Машину погрузили бережно, без царапин.',
-  },
-  {
-    name: 'Алина',
-    text: 'После ДТП забрали авто ночью, сделали фотофиксацию. Всё аккуратно и спокойно.',
-  },
-  {
-    name: 'Руслан',
-    text: 'Нужно было перевезти спортивную машину с низким клиренсом. Платформа и заезд — без ущерба бамперу.',
-  },
 ]
 
 function App() {
@@ -230,19 +214,6 @@ function App() {
             <p>Низкая платформа</p>
             <span>Спорткары и авто с обвесом</span>
           </div>
-        </div>
-      </section>
-
-      <section className="reviews section-block alt" id="reviews">
-        <h2>Отзывы клиентов</h2>
-        <div className="review-grid">
-          {reviews.map((review) => (
-            <div key={review.name} className="review-card">
-              <div className="quote">“</div>
-              <p className="review-text">{review.text}</p>
-              <p className="review-name">{review.name}</p>
-            </div>
-          ))}
         </div>
       </section>
 
