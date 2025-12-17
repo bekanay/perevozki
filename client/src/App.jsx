@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import './App.css'
 
-const heroImage = `${import.meta.env.BASE_URL}gazel2.png`
+const heroImage = `${import.meta.env.BASE_URL}7.png`
 const logoImage = `${import.meta.env.BASE_URL}logo_avtohelp.png`
 const kzFlag = `${import.meta.env.BASE_URL}flags/kz.svg`
 const ruFlag = `${import.meta.env.BASE_URL}flags/ru.svg`
 const kgFlag = `${import.meta.env.BASE_URL}flags/kg.svg`
 const galleryImages = [
-  `${import.meta.env.BASE_URL}1.jpeg`,
-  `${import.meta.env.BASE_URL}2.jpeg`,
-  `${import.meta.env.BASE_URL}3.jpeg`,
+  `${import.meta.env.BASE_URL}7.png`,
+  `${import.meta.env.BASE_URL}8.png`,
   `${import.meta.env.BASE_URL}4.PNG`,
   `${import.meta.env.BASE_URL}5.PNG`,
   `${import.meta.env.BASE_URL}6.PNG`,
