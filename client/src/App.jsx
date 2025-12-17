@@ -4,11 +4,12 @@ import './App.css'
 const heroImage = `${import.meta.env.BASE_URL}gazel2.png`
 const logoImage = `${import.meta.env.BASE_URL}logo_avtohelp.png`
 const galleryImages = [
-  `${import.meta.env.BASE_URL}evacuator.jpg`,
-  `${import.meta.env.BASE_URL}gazel1.jpg`,
-  `${import.meta.env.BASE_URL}gazel2.png`,
-  `${import.meta.env.BASE_URL}gazel3.jpg`,
-  `${import.meta.env.BASE_URL}truck-hero.jpg`,
+  `${import.meta.env.BASE_URL}1.jpeg`,
+  `${import.meta.env.BASE_URL}2.jpeg`,
+  `${import.meta.env.BASE_URL}3.jpeg`,
+  `${import.meta.env.BASE_URL}4.PNG`,
+  `${import.meta.env.BASE_URL}5.PNG`,
+  `${import.meta.env.BASE_URL}6.PNG`,
 ]
 
 const navLinks = [
@@ -84,6 +85,40 @@ function App() {
             </a>
           ))}
         </nav>
+        <div className="icon-row">
+          <a
+            className="icon-btn wa"
+            href="https://wa.me/77076248060"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp avtohelp_kz"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967c-.273-.1-.472-.149-.67.15c-.197.297-.767.966-.94 1.164c-.173.199-.347.223-.644.075c-.297-.149-1.255-.462-2.39-1.475c-.883-.788-1.48-1.761-1.653-2.059c-.173-.297-.018-.458.13-.606c.134-.133.298-.347.446-.52c.149-.173.199-.298.298-.497c.099-.198.05-.372-.025-.52c-.075-.149-.669-1.611-.916-2.206c-.242-.58-.488-.502-.67-.512l-.572-.01c-.198 0-.52.074-.792.372c-.272.298-1.04 1.016-1.04 2.477c0 1.46 1.065 2.87 1.213 3.068c.149.198 2.095 3.2 5.076 4.487c.709.306 1.262.489 1.694.626c.712.227 1.36.195 1.872.118c.571-.085 1.758-.719 2.006-1.413c.248-.694.248-1.289.173-1.413c-.074-.124-.272-.198-.57-.347z"
+                fill="currentColor"
+              />
+              <path
+                d="M12.002 2.002c-5.5 0-9.998 4.498-9.998 9.998c0 1.762.46 3.476 1.333 4.985l-1.424 5.2l5.318-1.393a9.96 9.96 0 0 0 4.77 1.206h.001c5.5 0 9.998-4.498 9.998-9.998s-4.498-9.998-9.998-9.998Zm0 18.143c-1.493 0-2.955-.402-4.229-1.163l-.303-.179l-3.155.826l.843-3.086l-.198-.317a7.96 7.96 0 0 1-1.224-4.218c0-4.411 3.587-7.998 7.998-7.998s7.998 3.587 7.998 7.998s-3.587 7.998-7.998 7.998Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a
+            className="icon-btn insta"
+            href="https://www.instagram.com/avtohelp_kz/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram avtohelp_kz"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 2.5A3.25 3.25 0 0 0 4.5 7.75v8.5A3.25 3.25 0 0 0 7.75 19.5h8.5a3.25 3.25 0 0 0 3.25-3.25v-8.5A3.25 3.25 0 0 0 16.25 4.5Zm8.75 1.25a1 1 0 1 1 0 2a1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
         <button className="btn ghost" onClick={openContacts}>
           Вызвать сейчас
         </button>
