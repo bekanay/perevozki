@@ -3,6 +3,9 @@ import './App.css'
 
 const heroImage = `${import.meta.env.BASE_URL}gazel2.png`
 const logoImage = `${import.meta.env.BASE_URL}logo_avtohelp.png`
+const kzFlag = `${import.meta.env.BASE_URL}flags/kz.svg`
+const ruFlag = `${import.meta.env.BASE_URL}flags/ru.svg`
+const kgFlag = `${import.meta.env.BASE_URL}flags/kg.svg`
 const galleryImages = [
   `${import.meta.env.BASE_URL}1.jpeg`,
   `${import.meta.env.BASE_URL}2.jpeg`,
@@ -128,8 +131,13 @@ function App() {
         <div className="hero-left">
           <div className="hero-bg" aria-hidden />
           <p className="tag">Эвакуатор • Астана и область</p>
+          <div className="country-flags" aria-label="Страны выезда">
+            <img className="country-flag" src={kzFlag} alt="Казахстан" decoding="async" />
+            <img className="country-flag" src={ruFlag} alt="Россия" decoding="async" />
+            <img className="country-flag" src={kgFlag} alt="Кыргызстан" decoding="async" />
+          </div>
           <div className="hero-title">
-            <h1>Эвакуатор с экипажем — быстро и бережно</h1>
+            <h1>Выезд по Казахстану, России, Кыргызстану</h1>
           </div>
           <div className="hero-actions">
             <button className="btn primary" onClick={openContacts}>
