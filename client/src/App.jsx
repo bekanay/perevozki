@@ -51,6 +51,11 @@ function App() {
   const closeContacts = () => setShowContacts(false)
   const nextSlide = () => setSlide((prev) => (prev + 1) % galleryImages.length)
   const prevSlide = () => setSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
+  const trackConversion = () => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', { send_to: 'AW-17815990890/LXMZCO2krdQbEOrkqa9C' })
+    }
+  }
 
   return (
     <div className="page">
@@ -227,7 +232,7 @@ function App() {
             <h3>Свяжитесь с нами</h3>
             <p className="modal-text">Подача от 25 минут. Выберите удобный способ:</p>
             <div className="modal-actions">
-              <a className="btn primary full" href="tel:+77076248060">
+              <a className="btn primary full" href="tel:+77076248060" onClick={trackConversion}>
                 Позвонить: +7 (707) 624 8060
               </a>
               <a
@@ -235,6 +240,7 @@ function App() {
                 href="https://wa.me/77076248060"
                 target="_blank"
                 rel="noreferrer"
+                onClick={trackConversion}
               >
                 Написать в WhatsApp
               </a>
