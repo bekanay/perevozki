@@ -53,7 +53,14 @@ function App() {
   const prevSlide = () => setSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length)
   const trackConversion = () => {
     if (window.gtag) {
-      window.gtag('event', 'conversion', { send_to: 'AW-17815990890/LXMZCO2krdQbEOrkqa9C' })
+      // Enhanced Conversions - отправляем данные пользователя
+      window.gtag('set', 'user_data', {
+        'phone_number': '+77076248060'
+      });
+      // Отправляем событие конверсии
+      window.gtag('event', 'conversion', { 
+        send_to: 'AW-17815990890/LXMZCO2krdQbEOrkqa9C'
+      });
     }
   }
 

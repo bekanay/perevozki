@@ -1,19 +1,69 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48" />
+  <link rel="icon" type="image/png" href="/favicon-48.png" sizes="48x48" />
+  <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>avtohelp_kz | Эвакуатор Астана</title>
+  <meta
+    name="description"
+    content="Эвакуатор 24/7 в Астане: подача от 25 минут, без наценки за ночь. Перевозка легковых авто, SUV, мото, выезд за город."
+  />
+  <link rel="canonical" href="https://avtohelp24.kz/" />
+  <meta property="og:site_name" content="avtohelp_kz" />
+  <meta property="og:title" content="avtohelp_kz | Эвакуатор Астана" />
+  <meta
+    property="og:description"
+    content="Эвакуатор 24/7 в Астане: подача от 25 минут, без наценки за ночь. Перевозка легковых авто, SUV, мото, выезд за город."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://avtohelp24.kz/" />
+  <meta property="og:image" content="https://avtohelp24.kz/logo_avtohelp.png" />
+  <meta property="og:image:width" content="505" />
+  <meta property="og:image:height" content="495" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="avtohelp_kz | Эвакуатор Астана" />
+  <meta
+    name="twitter:description"
+    content="Эвакуатор 24/7 в Астане: подача от 25 минут, без наценки за ночь. Перевозка легковых авто, SUV, мото, выезд за город."
+  />
+  <meta name="twitter:image" content="https://avtohelp24.kz/logo_avtohelp.png" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TowingService",
+      "name": "avtohelp_kz",
+      "url": "https://avtohelp24.kz/",
+      "logo": "https://avtohelp24.kz/logo_avtohelp.png",
+      "image": "https://avtohelp24.kz/logo_avtohelp.png",
+      "telephone": "+77076248060",
+      "areaServed": "Астана",
+      "sameAs": ["https://www.instagram.com/avtohelp_kz/"]
+    }
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17815990890"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'AW-17815990890');
+    
+    // Enhanced Conversions - расширенное отслеживание конверсий
+    gtag('config', 'AW-17815990890', {
+      'allow_enhanced_conversions': true
+    });
+    
+    // Функция для отправки данных расширенных конверсий
+    window.sendEnhancedConversion = function(phoneNumber) {
+      gtag('set', 'user_data', {
+        'phone_number': phoneNumber
+      });
+    };
   </script>
 </head>
 
