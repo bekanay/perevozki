@@ -139,6 +139,17 @@
   box-shadow: 0 12px 28px rgba(221, 42, 123, 0.36);
 }
 
+.icon-btn.tiktok {
+  background: #000;
+  color: #fff;
+  border: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.icon-btn.tiktok:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.36);
+}
+
 .btn {
   border: none;
   background: #f5641c;

@@ -58,7 +58,7 @@ function App() {
         'phone_number': '+77076248060'
       });
       // Отправляем событие конверсии
-      window.gtag('event', 'conversion', { 
+      window.gtag('event', 'conversion', {
         send_to: 'AW-17815990890/LXMZCO2krdQbEOrkqa9C'
       });
     }
@@ -112,6 +112,20 @@ function App() {
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 2.5A3.25 3.25 0 0 0 4.5 7.75v8.5A3.25 3.25 0 0 0 7.75 19.5h8.5a3.25 3.25 0 0 0 3.25-3.25v-8.5A3.25 3.25 0 0 0 16.25 4.5Zm8.75 1.25a1 1 0 1 1 0 2a1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6a3 3 0 0 0 0-6Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a
+            className="icon-btn tiktok"
+            href="https://www.tiktok.com/@avtohelp_kz?_r=1&_t=ZM-92oun104dJ2"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="TikTok avtohelp_kz"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74a2.89 2.89 0 0 1 2.31-4.64a2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"
                 fill="currentColor"
               />
             </svg>
@@ -258,6 +272,14 @@ function App() {
                 rel="noreferrer"
               >
                 Instagram: @avtohelp_kz
+              </a>
+              <a
+                className="btn ghost full"
+                href="https://www.tiktok.com/@avtohelp_kz?_r=1&_t=ZM-92oun104dJ2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                TikTok: @avtohelp_kz
               </a>
             </div>
           </div>
